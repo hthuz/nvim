@@ -27,6 +27,9 @@ require("lazy").setup({
     {
         "neovim/nvim-lspconfig",
         event = {"BufEnter"},
+        cofig = function()
+            require('config/nvim-lspconfig')
+        end
     },
 
 
@@ -40,6 +43,9 @@ require("lazy").setup({
             "hrsh7th/cmp-vsnip",
             "hrsh7th/vim-vsnip"
         },
+        config = function()
+            require('config/nvim-cmp')
+        end
 
     },
 
@@ -50,14 +56,16 @@ require("lazy").setup({
 
     {
         "nvim-treesitter/nvim-treesitter",
-        event = "BufEnter"
+        event = "BufEnter",
+        config = function()
+            require('config/nvim-treesitter')
+        end
     },
 
     {
         "folke/tokyonight.nvim",
         lazy = false,
         prioprity = 1000,
-
     },
 
     {
@@ -101,8 +109,3 @@ require("lazy").setup({
 
 })
 
-
--- Load plugin config
-require('config/nvim-lspconfig')
-require('config/nvim-cmp')
-require('config/nvim-treesitter')
