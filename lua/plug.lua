@@ -14,6 +14,8 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
+-- Event order
+-- BufRead(Post)->BufEnter
 
 -- Plugins installed
 require("lazy").setup({
@@ -25,7 +27,6 @@ require("lazy").setup({
     {
         "neovim/nvim-lspconfig",
         event = {"BufEnter"},
-
     },
 
 
@@ -33,14 +34,18 @@ require("lazy").setup({
         "hrsh7th/nvim-cmp",
         event = "InsertEnter",
         dependencies = {
-            "hrsh7th/cmp-nvim-lsp",
-            "hrsh7th/cmp-buffer",
             "hrsh7th/cmp-path",
+            "hrsh7th/cmp-nvim-lsp",
             "hrsh7th/cmp-cmdline",
             "hrsh7th/cmp-vsnip",
             "hrsh7th/vim-vsnip"
         },
 
+    },
+
+    {
+        "hrsh7th/cmp-buffer",
+        event = "InsertEnter"
     },
 
     {
