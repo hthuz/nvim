@@ -31,4 +31,4 @@ opt.shiftwidth = 4
 opt.softtabstop = 4
 opt.tabstop = 4
 
-vim.cmd[[ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif ]]
+vim.cmd[[ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif ]]                                                           
