@@ -1,0 +1,17 @@
+
+require('nvim-treesitter.configs').setup {
+    ensure_installed = {"c","cpp","python","lua","html","htmldjango","vim","vimdoc"},
+
+    auto_install = true,
+
+    highlight = {
+        enable = true,
+    },
+
+    indent = {
+        enable = true,
+    }
+
+
+}
+

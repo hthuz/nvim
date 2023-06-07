@@ -1,0 +1,14 @@
+{
+    "workspace.library": [
+        "/home/autentico/.config/nvim",
+        "/home/autentico/.local/share/nvim/lazy/lazy.nvim",
+        "/home/autentico/.local/share/nvim/lazy/nvim-lspconfig",
+        "/home/autentico/.local/share/nvim/lazy/tokyonight.nvim",
+        "/usr/share/nvim/runtime",
+        "/usr/share/nvim/runtime/pack/dist/opt/matchit",
+        "/usr/lib/nvim",
+        "/home/autentico/.config/nvim/after",
+        "/home/autentico/.local/state/nvim/lazy/readme",
+        "${3rd}/luassert/library"
+    ]
+}
