@@ -35,7 +35,7 @@ require("lazy").setup({
 
     {
         "hrsh7th/nvim-cmp",
-        event = "InsertEnter",
+        event = {"InsertEnter","CmdLineEnter"},
         dependencies = {
             "hrsh7th/cmp-path",
             "hrsh7th/cmp-nvim-lsp",
@@ -56,7 +56,7 @@ require("lazy").setup({
 
     {
         "nvim-treesitter/nvim-treesitter",
-        event = "BufEnter",
+        event = "FileType",
         config = function()
             require('config/nvim-treesitter')
         end
