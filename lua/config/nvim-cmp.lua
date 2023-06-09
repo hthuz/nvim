@@ -25,15 +25,15 @@ cmp.setup({
         ['<Tab>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()
-                if (has_words_before) then
-                    cmp.complete()
-                end
+                cmp.complete()
+                -- if (has_words_before()) then
+                --     cmp.complete()
+                -- end
             else
                 fallback()
             end
 
         end, {'i','s','c'} ),
-      
 
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),

@@ -16,6 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Event order
 -- BufRead(Post)->BufEnter
+-- Either keys/event/cmd is matched, the plug in loaded
 
 -- Plugins installed
 require("lazy").setup({
@@ -27,9 +28,9 @@ require("lazy").setup({
     {
         "neovim/nvim-lspconfig",
         event = {"BufEnter"},
-        cofig = function()
-            require('config/nvim-lspconfig')
-        end
+        -- cofig = function()
+        --     require('config/nvim-lspconfig')
+        -- end
     },
 
 
@@ -94,9 +95,9 @@ require("lazy").setup({
 
     {
         "numToStr/Comment.nvim",
-        event = "BufEnter",
+        keys = "<C-_>",
         config = function()
-            require("Comment").setup()
+            require("config/Comment")
         end
 
     },
@@ -109,3 +110,4 @@ require("lazy").setup({
 
 })
 
+require('config/nvim-lspconfig')
