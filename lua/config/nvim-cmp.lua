@@ -28,10 +28,9 @@ cmp.setup({
         ['<Tab>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()
-                cmp.complete()
-                -- if (has_words_before()) then
-                --     cmp.complete()
-                -- end
+                if (has_words_before()) then
+                    cmp.complete()
+                end
             else
                 fallback()
             end

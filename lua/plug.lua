@@ -105,29 +105,23 @@ require("lazy").setup({
 
     },
 
+
     {
-        "nvim-tree/nvim-web-devicons",
-        lazy = true
-    },
+        "nvim-tree/nvim-tree.lua",
+        dependencies = {
+            "nvim-tree/nvim-web-devicons"
+        },
+        keys = {
+            {'<leader>tc', "<cmd>NvimTreeClose<cr>"},
+            {'<leader>tt', "<cmd>NvimTreeFocus<cr>"}
+        },
+        config = function()
+            require("config/nvim-tree")
+        end
+    }
 
 
 }, { -- Config for lazy
-        ui = {
-            icons = {
-                cmd = "⌘",
-                config = "🛠",
-                event = "📅",
-                ft = "📂",
-                init = "⚙",
-                keys = "🗝",
-                plugin = "🔌",
-                runtime = "💻",
-                source = "📄",
-                start = "🚀",
-                task = "📌",
-                lazy = "💤 ",
-            },
-        },
     })
 
 require('config/nvim-lspconfig')

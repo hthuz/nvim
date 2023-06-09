@@ -10,6 +10,7 @@
 
 
 local opt = vim.opt
+local g = vim.g
 
 opt.filetype = "ON"
 opt.number = true
@@ -30,5 +31,10 @@ opt.expandtab = true
 opt.shiftwidth = 4
 opt.softtabstop = 4
 opt.tabstop = 4
+
+opt.termguicolors = true
+g.loaded_netrw = 1
+g.loaded_netrwPlugin = 1
+
 
 vim.cmd[[ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif ]]                                                           
