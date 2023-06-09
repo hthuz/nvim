@@ -118,7 +118,13 @@ require("lazy").setup({
         config = function()
             require("config/nvim-tree")
         end
+    },
+
+    {
+        "tpope/vim-fugitive",
+        event = "CmdLineEnter",
     }
+
 
 
 }, { -- Config for lazy
