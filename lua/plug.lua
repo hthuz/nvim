@@ -95,7 +95,9 @@ require("lazy").setup({
 
     {
         "numToStr/Comment.nvim",
-        keys = "<C-_>",
+        keys = {
+            {'<C-_>', mode = {'n', 'v'}},
+        },
         config = function()
             require("config/Comment")
         end

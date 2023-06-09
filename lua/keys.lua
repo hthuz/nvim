@@ -5,6 +5,9 @@
 -- sequence: sequence of keys to press
 -- command you want to execute
 -- options (noremap/silent etc)
+--
+-- Details about mode, see :help mode(). Common cases are
+-- n: Normal,i: insert v: vsual, c:command-line editing
 local map = vim.api.nvim_set_keymap
 local opt = {noremap = true, silent = true, expr = true}
 
