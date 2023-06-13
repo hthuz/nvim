@@ -105,7 +105,6 @@ require("lazy").setup({
 
     },
 
-
     {
         "nvim-tree/nvim-tree.lua",
         dependencies = {
@@ -127,6 +126,7 @@ require("lazy").setup({
 
     {
         "nvim-lualine/lualine.nvim",
+        event = "BufEnter",
         config = function()
             require('config/lualine')
         end
