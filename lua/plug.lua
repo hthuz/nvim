@@ -34,13 +34,20 @@ require("lazy").setup({
         -- end
     },
 
+    {
+        "nvimdev/lspsaga.nvim",
+        event = "LspAttach",
+        config = function()
+            require("lspsaga").setup({})
+        end
+    },
+
 
     {
         "hrsh7th/nvim-cmp",
         event = {"InsertEnter","CmdLineEnter"},
         dependencies = {
             "hrsh7th/cmp-path",
-            "hrsh7th/cmp-nvim-lsp",
             "hrsh7th/cmp-cmdline",
             "hrsh7th/cmp-vsnip",
             "hrsh7th/vim-vsnip"
@@ -51,9 +58,15 @@ require("lazy").setup({
 
     },
 
+
     {
         "hrsh7th/cmp-buffer",
         event = "InsertEnter"
+    },
+
+    {
+        "hrsh7th/cmp-nvim-lsp",
+        event = "InsertEnter",
     },
 
     {
@@ -123,6 +136,7 @@ require("lazy").setup({
         "tpope/vim-fugitive",
         event = "CmdLineEnter",
     },
+
 
     {
         "nvim-lualine/lualine.nvim",
