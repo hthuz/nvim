@@ -166,6 +166,11 @@ require("lazy").setup({
 
     },
 
+    {
+        "github/copilot.vim",
+        cmd="Copilot enable"
+    },
+
 
 
 }, { -- Config for lazy
