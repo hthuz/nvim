@@ -146,6 +146,16 @@ require("lazy").setup({
         end
     },
 
+    {
+        'akinsho/toggleterm.nvim',
+        keys = {
+            {'<C-t>', "<cmd>ToggleTerm direction=float<cr>"}
+        },
+        config = function()
+            require('config/toggleterm')
+        end
+    },
+
 
 
 }, { -- Config for lazy
