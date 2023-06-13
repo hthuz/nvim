@@ -156,6 +156,16 @@ require("lazy").setup({
         end
     },
 
+    {
+        'nvimdev/dashboard-nvim',
+        event = "VimEnter",
+        config = function()
+            require('config/dashboard')
+        end
+
+
+    },
+
 
 
 }, { -- Config for lazy
