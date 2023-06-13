@@ -123,7 +123,14 @@ require("lazy").setup({
     {
         "tpope/vim-fugitive",
         event = "CmdLineEnter",
-    }
+    },
+
+    {
+        "nvim-lualine/lualine.nvim",
+        config = function()
+            require('config/lualine')
+        end
+    },
 
 
 
