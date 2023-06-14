@@ -177,6 +177,18 @@ require("lazy").setup({
 
     },
 
+    {
+        "preservim/vim-markdown",
+        ft = "markdown",
+        dependencies = {
+            "godlygeek/tabular"
+        },
+        config = function()
+            require('config/vim-markdown')
+        end
+
+    },
+
 
 
 }, { -- Config for lazy
