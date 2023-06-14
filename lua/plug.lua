@@ -89,12 +89,15 @@ require("lazy").setup({
         keys = {
             {"<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>"},
             {"<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>"},
-            {"<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>"},
+            -- {"<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>"},
             {"<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>"}
         },
         dependencies = {
             "nvim-lua/plenary.nvim",
-        }
+        },
+        config = function()
+            require('config/telescope')
+        end
 
     },
 
@@ -186,6 +189,18 @@ require("lazy").setup({
         config = function()
             require('config/vim-markdown')
         end
+
+    },
+
+    {
+        "nvim-telescope/telescope-file-browser.nvim",
+        keys = {
+            {'<leader>fb', "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>"},
+        },
+        dependencies = {
+            "nvim-telescope/telescope.nvim",
+            "nvim-lua/plenary.nvim",
+        }
 
     },
 
