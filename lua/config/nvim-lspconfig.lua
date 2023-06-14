@@ -24,6 +24,7 @@ lspconfig.html.setup {}
 lspconfig.tsserver.setup {}
 lspconfig.cssls.setup {}
 lspconfig.tailwindcss.setup {}
+lspconfig.marksman.setup {}
 
 
 

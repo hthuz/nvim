@@ -171,6 +171,12 @@ require("lazy").setup({
         cmd="Copilot enable"
     },
 
+    {
+        "HiPhish/nvim-ts-rainbow2",
+        event = "FileType",
+
+    },
+
 
 
 }, { -- Config for lazy
