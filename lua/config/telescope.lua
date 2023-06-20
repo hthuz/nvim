@@ -1,11 +1,7 @@
 
 require('telescope').setup {
-    -- extensions = {
-    --     file_browser = {
-    --
-    --     },
-    -- },
+    extensions = {
+    },
 
 }
 
--- require("telescope").load_extension "file_browser"
