@@ -36,7 +36,8 @@ require("lazy").setup({
 
     {
         "nvimdev/lspsaga.nvim",
-        event = "LspAttach",
+        -- event = "LspAttach",
+        lazy = true,
         config = function()
             require("lspsaga").setup({})
         end
@@ -191,19 +192,9 @@ require("lazy").setup({
         end
 
     },
-
     {
-        "nvim-telescope/telescope-file-browser.nvim",
-        keys = {
-            {'<leader>fb', "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>"},
-        },
-        dependencies = {
-            "nvim-telescope/telescope.nvim",
-            "nvim-lua/plenary.nvim",
-        }
-
+        'Bekaboo/dropbar.nvim'
     },
-
 
 
 }, { -- Config for lazy
