@@ -48,7 +48,7 @@ cmp.setup({
         { name = 'vsnip' },
     }, {
             { name = 'fuzzy_path'},
-            { name = 'buffer' },
+            { name = 'fuzzy_buffer' },
         })
 })
 
@@ -56,7 +56,7 @@ cmp.setup({
 cmp.setup.cmdline({ '/', '?' }, {
     mapping = cmp.mapping.preset.cmdline(),
     sources = {
-        { name = 'buffer' }
+        { name = 'fuzzy_buffer' }
     }
 })
 

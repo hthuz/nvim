@@ -208,6 +208,15 @@ require("lazy").setup({
             "hrsh7th/nvim-cmp",
             "tzachar/fuzzy.nvim"
         }
+    },
+
+    {
+        "tzachar/cmp-fuzzy-buffer",
+        event = {"CmdLineEnter", "InsertEnter"},
+        dependencies = {
+            "hrsh7th/nvim-cmp",
+            "tzachar/fuzzy.nvim"
+        }
     }
 
 }, { -- Config for lazy
