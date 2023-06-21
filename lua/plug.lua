@@ -48,7 +48,6 @@ require("lazy").setup({
         "hrsh7th/nvim-cmp",
         event = {"InsertEnter","CmdLineEnter"},
         dependencies = {
-            "hrsh7th/cmp-path",
             "hrsh7th/cmp-cmdline",
             "hrsh7th/cmp-vsnip",
             "hrsh7th/vim-vsnip"
@@ -196,8 +195,24 @@ require("lazy").setup({
         'Bekaboo/dropbar.nvim'
     },
 
+    {
+        "nvim-telescope/telescope-fzf-native.nvim",
+        build = 'make'
+
+    },
+
+    {
+        "tzachar/cmp-fuzzy-path",
+        event = {"CmdLineEnter", "InsertEnter"},
+        dependencies = {
+            "hrsh7th/nvim-cmp",
+            "tzachar/fuzzy.nvim"
+        }
+    }
 
 }, { -- Config for lazy
     })
 
 require('config/nvim-lspconfig')
+
+

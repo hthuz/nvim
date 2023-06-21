@@ -47,6 +47,7 @@ cmp.setup({
         { name = 'nvim_lsp' },
         { name = 'vsnip' },
     }, {
+            { name = 'fuzzy_path'},
             { name = 'buffer' },
         })
 })
@@ -63,7 +64,7 @@ cmp.setup.cmdline({ '/', '?' }, {
 cmp.setup.cmdline(':', {
     mapping = cmp.mapping.preset.cmdline(),
     sources = cmp.config.sources({
-        { name = 'path' }
+        { name = 'fuzzy_path' }
     }, {
             { name = 'cmdline' }
         })
