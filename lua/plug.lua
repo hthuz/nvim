@@ -217,7 +217,15 @@ require("lazy").setup({
             "hrsh7th/nvim-cmp",
             "tzachar/fuzzy.nvim"
         }
+    },
+
+    {
+        "kevinhwang91/rnvimr",
+        keys = {
+            {'<leader>r', "<cmd>RnvimrToggle<cr>"}
+        }
     }
+
 
 }, { -- Config for lazy
     })

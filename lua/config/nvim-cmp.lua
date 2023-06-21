@@ -60,6 +60,7 @@ cmp.setup.cmdline({ '/', '?' }, {
     }
 })
 
+
 -- Use cmdline & path source for ':'
 cmp.setup.cmdline(':', {
     mapping = cmp.mapping.preset.cmdline(),
