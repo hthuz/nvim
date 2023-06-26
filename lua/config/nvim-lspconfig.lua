@@ -19,11 +19,14 @@ lspconfig.lua_ls.setup {
 
 }
 
-lspconfig.clangd.setup {}
-lspconfig.html.setup {}
-lspconfig.tsserver.setup {}
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+lspconfig.clangd.setup {}
+lspconfig.html.setup {
+    capabilities = capabilities,
+}
+lspconfig.tsserver.setup {}
 
 lspconfig.cssls.setup {
     capabilities = capabilities,

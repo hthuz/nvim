@@ -231,6 +231,12 @@ require("lazy").setup({
         keys = {
             {'<leader>r', "<cmd>RnvimrToggle<cr>"}
         }
+    },
+
+    {
+        "windwp/nvim-ts-autotag",
+        event = {"InsertEnter"},
+
     }
 
 
