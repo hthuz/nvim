@@ -233,10 +233,20 @@ require("lazy").setup({
         }
     },
 
+    -- it seems than if ft if html or event is InsertEnter, 
+    -- treesitter won't load this plugin since autotag starts later than ts.
     {
         "windwp/nvim-ts-autotag",
-        event = {"InsertEnter"},
+        lazy = true,
+        -- ft = "html",
+        -- dependencies = {
+        --     "nvim-treesitter/nvim-treesitter"
+        -- }
 
+    },
+    -- But it seems that this plugin can't be lazy loaded either
+    {
+        "alvan/vim-closetag",
     }
 
 
