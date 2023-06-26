@@ -1,6 +1,6 @@
 
 require('nvim-treesitter.configs').setup {
-    ensure_installed = {"c","cpp","python","lua","html","htmldjango","vim","vimdoc"},
+    ensure_installed = {"c","cpp","python","lua","html","htmldjango","vim","vimdoc", "javascript","css"},
 
     auto_install = true,
 
