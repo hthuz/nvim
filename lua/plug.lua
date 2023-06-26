@@ -58,15 +58,39 @@ require("lazy").setup({
 
     },
 
-
     {
         "hrsh7th/cmp-buffer",
         event = "InsertEnter"
     },
 
     {
+        "hrsh7th/cmp-path",
+        event = {"InsertEnter", "CmdLineEnter"}
+    },
+
+    {
         "hrsh7th/cmp-nvim-lsp",
         event = "InsertEnter",
+    },
+
+    {
+        "tzachar/cmp-fuzzy-path",
+        lazy = true,
+        -- event = {"CmdLineEnter", "InsertEnter"},
+        dependencies = {
+            "hrsh7th/nvim-cmp",
+            "tzachar/fuzzy.nvim"
+        }
+    },
+
+    {
+        "tzachar/cmp-fuzzy-buffer",
+        lazy = true,
+        -- event = {"CmdLineEnter", "InsertEnter"},
+        dependencies = {
+            "hrsh7th/nvim-cmp",
+            "tzachar/fuzzy.nvim"
+        }
     },
 
     {
@@ -201,23 +225,6 @@ require("lazy").setup({
 
     },
 
-    {
-        "tzachar/cmp-fuzzy-path",
-        event = {"CmdLineEnter", "InsertEnter"},
-        dependencies = {
-            "hrsh7th/nvim-cmp",
-            "tzachar/fuzzy.nvim"
-        }
-    },
-
-    {
-        "tzachar/cmp-fuzzy-buffer",
-        event = {"CmdLineEnter", "InsertEnter"},
-        dependencies = {
-            "hrsh7th/nvim-cmp",
-            "tzachar/fuzzy.nvim"
-        }
-    },
 
     {
         "kevinhwang91/rnvimr",
