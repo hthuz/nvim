@@ -247,12 +247,17 @@ require("lazy").setup({
     -- But it seems that this plugin can't be lazy loaded either
     {
         "alvan/vim-closetag",
-    }
+    },
 
+    {
+        "iamcco/markdown-preview.nvim",
+        build = "cd app & npm install",
+        keys = {
+            {'<leader>md', "<cmd>MarkdownPreview<cr>"}
+        }
+    }
 
 }, { -- Config for lazy
     })
-
 require('config/nvim-lspconfig')
-
 
