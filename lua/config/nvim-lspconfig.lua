@@ -36,5 +36,7 @@ lspconfig.cssls.setup {
 lspconfig.tailwindcss.setup {}
 lspconfig.marksman.setup {}
 
+lspconfig.jdtls.setup {}
+
 
 
