@@ -29,9 +29,9 @@ require("lazy").setup({
     {
         "neovim/nvim-lspconfig",
         event = {"BufEnter"},
-        -- cofig = function()
-        --     require('config/nvim-lspconfig')
-        -- end
+        cofig = function()
+            require('config/nvim-lspconfig')
+        end
     },
 
     {
@@ -259,5 +259,5 @@ require("lazy").setup({
 
 }, { -- Config for lazy
     })
-require('config/nvim-lspconfig')
+-- require('config/nvim-lspconfig')
 
