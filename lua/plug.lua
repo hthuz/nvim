@@ -169,14 +169,14 @@ require("lazy").setup({
 
     {
         "preservim/vim-markdown",
-        -- ft = "markdown",
-        lazy = true,
-        -- dependencies = {
-        --     "godlygeek/tabular"
-        -- },
-        -- config = function()
-        --     require('config/vim-markdown')
-        -- end
+        ft = "markdown",
+        -- lazy = true,
+        dependencies = {
+            "godlygeek/tabular"
+        },
+        config = function()
+            require('config/vim-markdown')
+        end
     },
     {
         'nvimdev/dashboard-nvim',
