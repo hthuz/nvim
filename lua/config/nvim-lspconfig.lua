@@ -1,7 +1,7 @@
 
 local lspconfig = require('lspconfig')
 
-lspconfig.pyright.setup {}
+-- lspconfig.pyright.setup {}
 lspconfig.lua_ls.setup {
     settings = {
         Lua = {
@@ -12,7 +12,8 @@ lspconfig.lua_ls.setup {
                 globals = {'vim'},
             },
             workspace = {
-                library = vim.api.nvim_get_runtime_file("",true)
+                library = vim.api.nvim_get_runtime_file("",true),
+                checkThirdParty = false,
             }
         }
     }
@@ -36,7 +37,7 @@ lspconfig.cssls.setup {
 lspconfig.tailwindcss.setup {}
 lspconfig.marksman.setup {}
 
-lspconfig.jdtls.setup {}
+-- lspconfig.jdtls.setup {}
 
 
 
