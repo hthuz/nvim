@@ -22,6 +22,17 @@ vim.opt.rtp:prepend(lazypath)
 -- Plugins installed
 require("lazy").setup({
 
+    -------------------
+    -- Lsp
+    -------------------
+    {
+        "neovim/nvim-lspconfig",
+        event = {"BufEnter"},
+        -- cofig = function()
+        --     require('config/nvim-lspconfig')
+        -- end
+    },
+
     --------------------
     -- Completion
     --------------------
@@ -33,9 +44,9 @@ require("lazy").setup({
             "hrsh7th/cmp-vsnip",
             "hrsh7th/vim-vsnip"
         },
-        -- config = function()
-        --     require('config/nvim-cmp')
-        -- end
+        config = function()
+            require('config/nvim-cmp')
+        end
     },
 
     {
@@ -103,16 +114,6 @@ require("lazy").setup({
         ft = {"html","djangohtml"}
     },
 
-    -------------------
-    -- Lsp
-    -------------------
-    {
-        "neovim/nvim-lspconfig",
-        event = {"BufEnter"},
-        cofig = function()
-            require('config/nvim-lspconfig')
-        end
-    },
 
 
     ------------------------------
