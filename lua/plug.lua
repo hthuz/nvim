@@ -51,7 +51,7 @@ require("lazy").setup({
 
     {
         "hrsh7th/cmp-buffer",
-        event = "InsertEnter"
+        event = {"InsertEnter","CmdLineEnter"}
     },
 
     {
@@ -169,13 +169,14 @@ require("lazy").setup({
 
     {
         "preservim/vim-markdown",
-        ft = "markdown",
-        dependencies = {
-            "godlygeek/tabular"
-        },
-        config = function()
-            require('config/vim-markdown')
-        end
+        -- ft = "markdown",
+        lazy = true,
+        -- dependencies = {
+        --     "godlygeek/tabular"
+        -- },
+        -- config = function()
+        --     require('config/vim-markdown')
+        -- end
     },
     {
         'nvimdev/dashboard-nvim',
