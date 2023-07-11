@@ -22,19 +22,6 @@ vim.opt.rtp:prepend(lazypath)
 -- Plugins installed
 require("lazy").setup({
 
-
-    -------------------
-    -- Lsp
-    -------------------
-    {
-        "neovim/nvim-lspconfig",
-        event = {"FileType"},
-        cofig = function()
-            require('config/nvim-lspconfig')
-        end
-    },
-
-
     --------------------
     -- Completion
     --------------------
@@ -46,9 +33,9 @@ require("lazy").setup({
             "hrsh7th/cmp-vsnip",
             "hrsh7th/vim-vsnip"
         },
-        config = function()
-            require('config/nvim-cmp')
-        end
+        -- config = function()
+        --     require('config/nvim-cmp')
+        -- end
     },
 
     {
@@ -113,7 +100,20 @@ require("lazy").setup({
     -- But it seems that this plugin can't be lazy loaded either
     {
         "alvan/vim-closetag",
+        ft = {"html","djangohtml"}
     },
+
+    -------------------
+    -- Lsp
+    -------------------
+    {
+        "neovim/nvim-lspconfig",
+        event = {"BufEnter"},
+        cofig = function()
+            require('config/nvim-lspconfig')
+        end
+    },
+
 
     ------------------------------
     -- Shortcut
@@ -255,7 +255,6 @@ require("lazy").setup({
         }
     },
 
-
     {
         "iamcco/markdown-preview.nvim",
         build = "cd app & npm install",
@@ -266,5 +265,6 @@ require("lazy").setup({
 
 }, { -- Config for lazy
     })
--- require('config/nvim-lspconfig')
+
+require('config/nvim-lspconfig')
 
