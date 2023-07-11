@@ -21,29 +21,23 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Plugins installed
 require("lazy").setup({
-    {
-        "dhruvasagar/vim-table-mode",
-        keys = "<leader>tm"
-    },
 
+
+    -------------------
+    -- Lsp
+    -------------------
     {
         "neovim/nvim-lspconfig",
-        event = {"BufEnter"},
+        event = {"FileType"},
         cofig = function()
             require('config/nvim-lspconfig')
         end
     },
 
-    {
-        "nvimdev/lspsaga.nvim",
-        -- event = "LspAttach",
-        lazy = true,
-        config = function()
-            require("lspsaga").setup({})
-        end
-    },
 
-
+    --------------------
+    -- Completion
+    --------------------
     {
         "hrsh7th/nvim-cmp",
         event = {"InsertEnter","CmdLineEnter"},
@@ -55,7 +49,6 @@ require("lazy").setup({
         config = function()
             require('config/nvim-cmp')
         end
-
     },
 
     {
@@ -94,6 +87,78 @@ require("lazy").setup({
     },
 
     {
+        "windwp/nvim-autopairs",
+        event = "InsertEnter",
+        config = function()
+            require("nvim-autopairs").setup {}
+        end
+    },
+
+    {
+        "github/copilot.vim",
+        cmd="Copilot enable"
+    },
+
+    -- it seems than if ft if html or event is InsertEnter, 
+    -- treesitter won't load this plugin since autotag starts later than ts.
+    {
+        "windwp/nvim-ts-autotag",
+        lazy = true,
+        -- ft = "html",
+        -- dependencies = {
+        --     "nvim-treesitter/nvim-treesitter"
+        -- }
+
+    },
+    -- But it seems that this plugin can't be lazy loaded either
+    {
+        "alvan/vim-closetag",
+    },
+
+    ------------------------------
+    -- Shortcut
+    -----------------------------
+    {
+        "dhruvasagar/vim-table-mode",
+        keys = "<leader>tm"
+    },
+
+    {
+        "numToStr/Comment.nvim",
+        keys = {
+            {'<C-_>', mode = {'n', 'v'}},
+        },
+        config = function()
+            require("config/Comment")
+        end
+
+    },
+
+    {
+        "tpope/vim-fugitive",
+        event = "CmdLineEnter",
+    },
+
+    ------------------------------
+    -- Decoration
+    ------------------------------
+
+    {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        prioprity = 1000,
+    },
+
+    {
+        "nvim-lualine/lualine.nvim",
+        event = "BufEnter",
+        config = function()
+            require('config/lualine')
+        end
+    },
+
+
+    {
         "nvim-treesitter/nvim-treesitter",
         event = "FileType",
         config = function()
@@ -102,10 +167,33 @@ require("lazy").setup({
     },
 
     {
-        "folke/tokyonight.nvim",
-        lazy = false,
-        prioprity = 1000,
+        "preservim/vim-markdown",
+        ft = "markdown",
+        dependencies = {
+            "godlygeek/tabular"
+        },
+        config = function()
+            require('config/vim-markdown')
+        end
     },
+    {
+        'nvimdev/dashboard-nvim',
+        event = "VimEnter",
+        config = function()
+            require('config/dashboard')
+        end
+
+
+    },
+
+    {
+        "HiPhish/nvim-ts-rainbow2",
+        event = "FileType",
+    },
+
+    --------------------------------
+    -- Tools
+    --------------------------------
 
     {
         "nvim-telescope/telescope.nvim",
@@ -126,23 +214,8 @@ require("lazy").setup({
     },
 
     {
-        "windwp/nvim-autopairs",
-        event = "InsertEnter",
-        config = function()
-            require("nvim-autopairs").setup {}
-        end
-    },
-
-
-    {
-        "numToStr/Comment.nvim",
-        keys = {
-            {'<C-_>', mode = {'n', 'v'}},
-        },
-        config = function()
-            require("config/Comment")
-        end
-
+        "nvim-telescope/telescope-fzf-native.nvim",
+        build = 'make'
     },
 
     {
@@ -160,20 +233,6 @@ require("lazy").setup({
     },
 
     {
-        "tpope/vim-fugitive",
-        event = "CmdLineEnter",
-    },
-
-
-    {
-        "nvim-lualine/lualine.nvim",
-        event = "BufEnter",
-        config = function()
-            require('config/lualine')
-        end
-    },
-
-    {
         'akinsho/toggleterm.nvim',
         keys = {
             {'<C-t>', "<cmd>ToggleTerm direction=float<cr>"}
@@ -183,46 +242,9 @@ require("lazy").setup({
         end
     },
 
-    {
-        'nvimdev/dashboard-nvim',
-        event = "VimEnter",
-        config = function()
-            require('config/dashboard')
-        end
 
-
-    },
-
-    {
-        "github/copilot.vim",
-        cmd="Copilot enable"
-    },
-
-    {
-        "HiPhish/nvim-ts-rainbow2",
-        event = "FileType",
-
-    },
-
-    {
-        "preservim/vim-markdown",
-        ft = "markdown",
-        dependencies = {
-            "godlygeek/tabular"
-        },
-        config = function()
-            require('config/vim-markdown')
-        end
-
-    },
     {
         'Bekaboo/dropbar.nvim'
-    },
-
-    {
-        "nvim-telescope/telescope-fzf-native.nvim",
-        build = 'make'
-
     },
 
 
@@ -233,21 +255,6 @@ require("lazy").setup({
         }
     },
 
-    -- it seems than if ft if html or event is InsertEnter, 
-    -- treesitter won't load this plugin since autotag starts later than ts.
-    {
-        "windwp/nvim-ts-autotag",
-        lazy = true,
-        -- ft = "html",
-        -- dependencies = {
-        --     "nvim-treesitter/nvim-treesitter"
-        -- }
-
-    },
-    -- But it seems that this plugin can't be lazy loaded either
-    {
-        "alvan/vim-closetag",
-    },
 
     {
         "iamcco/markdown-preview.nvim",
