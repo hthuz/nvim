@@ -121,7 +121,10 @@ require("lazy").setup({
     -----------------------------
     {
         "dhruvasagar/vim-table-mode",
-        keys = "<leader>tm"
+        keys = "<leader>tm",
+        config = function()
+            require("config/vim-table-mode")
+        end
     },
 
     {
@@ -260,6 +263,7 @@ require("lazy").setup({
     {
         "iamcco/markdown-preview.nvim",
         build = "cd app & npm install",
+        ft = "markdown",
         keys = {
             {'<leader>md', "<cmd>MarkdownPreview<cr>"}
         }
