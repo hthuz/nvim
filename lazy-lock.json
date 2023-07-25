@@ -12,7 +12,6 @@
   "dropbar.nvim": { "branch": "master", "commit": "19011d96959cd40a7173485ee54202589760caae" },
   "fuzzy.nvim": { "branch": "master", "commit": "67a42ad2fa6d5ff41f0ef3cf69bb247410da5d7a" },
   "lazy.nvim": { "branch": "main", "commit": "f8611632d0f9c6818e8eb54f9bcd1dad122b5a7f" },
-  "lspsaga.nvim": { "branch": "main", "commit": "4f075452c466df263e69ae142f6659dcf9324bf6" },
   "lualine.nvim": { "branch": "master", "commit": "05d78e9fd0cdfb4545974a5aa14b1be95a86e9c9" },
   "markdown-preview.nvim": { "branch": "master", "commit": "02cc3874738bc0f86e4b91f09b8a0ac88aef8e96" },
   "nvim-autopairs": { "branch": "master", "commit": "e8f7dd7a72de3e7b6626c050a802000e69d53ff0" },
