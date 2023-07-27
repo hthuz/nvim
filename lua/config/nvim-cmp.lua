@@ -29,7 +29,8 @@ cmp.setup({
             if cmp.visible() then
                 cmp.select_next_item()
                 if (has_words_before()) then
-                    cmp.complete()
+                    -- cmp.complete()
+                    cmp.mapping.confirm()
                 end
             else
                 fallback()

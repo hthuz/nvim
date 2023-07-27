@@ -41,4 +41,8 @@ lspconfig.marksman.setup {}
 lspconfig.jdtls.setup {}
 
 
+lspconfig.r_language_server.setup{}
+
+
+
 
