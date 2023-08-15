@@ -240,7 +240,8 @@ require("lazy").setup({
     {
         'akinsho/toggleterm.nvim',
         keys = {
-            {'<C-t>', "<cmd>ToggleTerm direction=float<cr>"}
+            {'<C-t>', "<cmd>ToggleTerm direction=float<cr>"},
+            {'<S-t>', "<cmd>ToggleTerm direction=vertical<cr>"}
         },
         config = function()
             require('config/toggleterm')

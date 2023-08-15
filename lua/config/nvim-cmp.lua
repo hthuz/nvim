@@ -19,7 +19,7 @@ cmp.setup({
         -- documentation = cmp.config.window.bordered(),
     },
     performance = {
-        max_view_entries = 20,
+        -- max_view_entries = 30,
     },
     completion = {
     },
