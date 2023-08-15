@@ -1,6 +1,11 @@
 
 require('toggleterm').setup{
-    hide_numbers = false,
+    -- hide_numbers = false,
+    size = math.floor(vim.o.columns * 0.4),
+    float_opts = {
+        width = math.floor(vim.o.columns * 0.5),
+        height = 30,
+    }
 
 }
 
