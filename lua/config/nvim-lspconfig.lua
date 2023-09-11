@@ -43,6 +43,8 @@ lspconfig.jdtls.setup {}
 
 lspconfig.r_language_server.setup{}
 
+lspconfig.svls.setup {}
+
 
 
 
