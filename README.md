@@ -8,6 +8,7 @@ Autentico's neovim configuration that meets basic development need in most cases
 - Meet basic development need.
 - Syntax Highlighting. Auto Completion. Fast to open files.
 - Plugin lazy loaded.
+- NOTE: not stable on neovim nightly build version
 
 ## Acknowledgement
 
