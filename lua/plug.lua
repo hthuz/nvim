@@ -190,10 +190,10 @@ require("lazy").setup({
     --     end
     -- },
 
-    -- {
-    --     "HiPhish/nvim-ts-rainbow2",
-    --     event = "FileType",
-    -- },
+    {
+        "HiPhish/nvim-ts-rainbow2",
+        event = "FileType",
+    },
 
     --------------------------------
     -- Tools
