@@ -191,10 +191,10 @@ require("lazy").setup({
 
     },
 
-    {
-        "HiPhish/nvim-ts-rainbow2",
-        event = "FileType",
-    },
+    -- {
+    --     "HiPhish/nvim-ts-rainbow2",
+    --     event = "FileType",
+    -- },
 
     --------------------------------
     -- Tools
@@ -249,9 +249,9 @@ require("lazy").setup({
     },
 
 
-    {
-        'Bekaboo/dropbar.nvim'
-    },
+    -- {
+    --     'Bekaboo/dropbar.nvim'
+    -- },
 
 
     {
