@@ -228,7 +228,7 @@ require("lazy").setup({
 
     {
         "nvim-telescope/telescope.nvim",
-        tag = '0.1.1',
+        tag = '0.1.6',
         keys = {
             {"<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>"},
             {"<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>"},
@@ -241,7 +241,6 @@ require("lazy").setup({
         config = function()
             require('config/telescope')
         end
-
     },
 
     {
