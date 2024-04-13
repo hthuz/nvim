@@ -33,6 +33,19 @@ require("lazy").setup({
         -- end
     },
 
+	-- {
+	-- 	"jose-elias-alvarez/null-ls.nvim",
+	-- 	config = function()
+	-- 		local null_ls = require('null-ls')
+	-- 		null_ls.setup({
+	-- 			sources = {
+	-- 				null_ls.builtins.formatting.stylua,
+	-- 				null_ls.builtins.diagnostics.eslint,
+	-- 				null_ls.builtins.completion.spell
+	-- 			}
+	-- 		})
+	-- 	end
+	-- },
     --------------------
     -- Completion
     --------------------
@@ -96,6 +109,17 @@ require("lazy").setup({
         "github/copilot.vim",
         cmd="Copilot enable"
     },
+
+    -- {
+    --     "nvimdev/lspsaga.nvim",
+    --     config = function()
+    --         require("lspsaga").setup({})
+    --     end,
+    --     dependencies = {
+    --         "nvim-treesitter/nvim-treesitter",
+    --         "nvim-tree/nvim-web-devicons"
+    --     }
+    -- },
 
     -- it seems than if ft if html or event is InsertEnter, 
     -- treesitter won't load this plugin since autotag starts later than ts.
@@ -163,13 +187,13 @@ require("lazy").setup({
     },
 
 
-    {
-        "nvim-treesitter/nvim-treesitter",
-        event = "FileType",
-        config = function()
-            require('config/nvim-treesitter')
-        end
-    },
+    -- {
+    --     "nvim-treesitter/nvim-treesitter",
+    --     event = "FileType",
+    --     config = function()
+    --         require('config/nvim-treesitter')
+    --     end
+    -- },
 
     {
         "preservim/vim-markdown",
@@ -193,6 +217,9 @@ require("lazy").setup({
     {
         "HiPhish/nvim-ts-rainbow2",
         event = "FileType",
+        dependencies = {
+            "nvim-treesitter/nvim-treesitter",
+        }
     },
 
     --------------------------------

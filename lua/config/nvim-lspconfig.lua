@@ -1,8 +1,8 @@
 
 local lspconfig = require('lspconfig')
 
--- lspconfig.pyright.setup {}
-lspconfig.pylsp.setup{}
+lspconfig.pyright.setup {}
+-- lspconfig.pylsp.setup{}
 lspconfig.lua_ls.setup {
     settings = {
         Lua = {
