@@ -11,9 +11,11 @@ vim.g.maplocalleader = " "
 require('opts')
 require('keys')
 require('plug')
+require("autocmds")
+-- print('hello')
+-- print("world")
 
 vim.cmd[[colorscheme tokyonight-moon]]
-
 
 --[[
 function _G.setn()

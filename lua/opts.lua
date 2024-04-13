@@ -11,6 +11,7 @@
 
 local opt = vim.opt
 local g = vim.g
+local bo = vim.bo
 
 opt.filetype = "ON"
 opt.number = true
@@ -27,7 +28,7 @@ opt.smartcase = true
 opt.incsearch = true
 opt.hlsearch = true
 
-opt.expandtab = true
+opt.expandtab = false
 opt.shiftwidth = 4
 opt.softtabstop = 4
 opt.tabstop = 4
