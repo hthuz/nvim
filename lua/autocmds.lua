@@ -8,7 +8,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
 	group = "filetype_python",
 	pattern = "*.py",
 	callback = function()
-		vim.opt.expandtab = false
+		-- vim.opt.expandtab = false
 	end
 })
 
