@@ -8,6 +8,35 @@ local has_words_before = function()
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
+
+local cmp_kinds = {
+	Text = '  ',
+	Method = '  ',
+	Function = '  ',
+	Constructor = '  ',
+	Field = '  ',
+	Variable = '  ',
+	Class = '  ',
+	Interface = '  ',
+	Module = '  ',
+	Property = '  ',
+	Unit = '  ',
+	Value = '  ',
+	Enum = '  ',
+	Keyword = '  ',
+	Snippet = '  ',
+	Color = '  ',
+	File = '  ',
+	Reference = '  ',
+	Folder = '  ',
+	EnumMember = '  ',
+	Constant = '  ',
+	Struct = '  ',
+	Event = '  ',
+	Operator = '  ',
+	TypeParameter = '  ',
+}
+
 cmp.setup({
     snippet = {
         expand = function(args)
@@ -23,6 +52,13 @@ cmp.setup({
     },
     completion = {
     },
+	formatting = {
+		-- format = require('lspkind').cmp_format(),
+		format = function(_, vim_item)
+			vim_item.kind = (cmp_kinds[vim_item.kind] or "") .. vim_item.kind
+			return vim_item
+		end
+	},
     mapping = cmp.mapping.preset.insert({
 
         ['<Tab>'] = cmp.mapping(function(fallback)
@@ -57,6 +93,7 @@ cmp.setup({
         { name = 'vsnip' },
         { name = 'path'},
         { name = 'buffer' },
+		{ name = 'nvim_lua'}
     })
 })
 

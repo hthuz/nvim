@@ -37,5 +37,6 @@ opt.termguicolors = true
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
 
-
 vim.cmd[[ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif ]]                                                           
+
+

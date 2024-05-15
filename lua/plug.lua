@@ -55,12 +55,19 @@ require("lazy").setup({
         dependencies = {
             "hrsh7th/cmp-cmdline",
             "hrsh7th/cmp-vsnip",
-            "hrsh7th/vim-vsnip"
+            "hrsh7th/vim-vsnip",
+			"onsails/lspkind.nvim"
+
         },
         config = function()
             require('config/nvim-cmp')
         end
     },
+
+	{
+		"hrsh7th/cmp-nvim-lua",
+		ft = {"lua"}
+	},
 
     {
         "hrsh7th/cmp-buffer",
