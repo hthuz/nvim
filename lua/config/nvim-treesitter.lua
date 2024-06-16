@@ -19,10 +19,12 @@ require('nvim-treesitter.configs').setup {
         "yuck",
         "r",
         "verilog",
-        "bash"
+        "bash",
+		"go"
     },
 
     auto_install = true,
+	-- auto_indent = true,
 
     highlight = {
         enable = true,

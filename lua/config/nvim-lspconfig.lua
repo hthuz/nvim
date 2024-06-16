@@ -45,6 +45,9 @@ lspconfig.r_language_server.setup{}
 
 lspconfig.svls.setup {}
 
+-- lspconfig.solc.setup {}
+lspconfig.solidity_ls_nomicfoundation.setup {}
 
+lspconfig.gopls.setup {}
 
 
