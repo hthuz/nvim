@@ -221,13 +221,22 @@ require("lazy").setup({
     --     end
     -- },
 
-    {
-        "HiPhish/nvim-ts-rainbow2",
-        event = "FileType",
-        dependencies = {
-            "nvim-treesitter/nvim-treesitter",
-        }
-    },
+	-- @Deprecated
+    -- {
+    --     "HiPhish/nvim-ts-rainbow2",
+    --     event = "FileType",
+    --     dependencies = {
+    --         "nvim-treesitter/nvim-treesitter",
+    --     }
+    -- },
+
+	{
+		"HiPhish/rainbow-delimiters.nvim",
+		event = "FileType",
+		config = function()
+			require('config/rainbow-delimiters')
+		end
+	},
 
     --------------------------------
     -- Tools

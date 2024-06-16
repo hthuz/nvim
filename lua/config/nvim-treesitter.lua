@@ -30,13 +30,15 @@ require('nvim-treesitter.configs').setup {
         enable = true,
     },
 
-    rainbow = {
-        enable = true,
-        query = "rainbow-parens",
-    },
+    -- rainbow = {
+    --     enable = true,
+    --     query = "rainbow-parens",
+    -- },
     autotag = {
         enable = false,
     },
+
+
 
 
 }
