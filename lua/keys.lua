@@ -14,6 +14,7 @@ local opt = {noremap = true, silent = true, expr = true}
 
 map("n", "<leader>sv", ":luafile %<cr>", {noremap = true})
 map("n", "<C-s>", ":w<cr>", {noremap = true})
+map("n", "<C-q>", ":q!<cr>", {noremap = true})
 map("n", "<leader><cr>", ":nohlsearch<cr>", {noremap = true})
 map("n", "<leader>ev", ":vsplit ~/.config/nvim/lua<cr>", {noremap = true})
 map("n", "<leader>w,", ":vertical resize -5<cr>",{noremap = true} )
