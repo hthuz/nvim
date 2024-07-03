@@ -18,6 +18,19 @@ vim.opt.rtp:prepend(lazypath)
 -- Event order
 -- BufRead(Post)->BufEnter
 -- Either keys/event/cmd is matched, the plug in loaded
+local comment_shortcut = "<C-/>"
+local comment_config = "config/Comment"
+local function isWsl()
+	local iswsl = require("config/os")
+	if iswsl == 1 then
+		comment_shortcut = "<C-_>"
+		comment_config = "config/CommentWsl"
+	end
+end
+
+if pcall(isWsl) then
+else
+end
 
 -- Plugins installed
 require("lazy").setup({
@@ -162,10 +175,10 @@ require("lazy").setup({
     {
         "numToStr/Comment.nvim",
         keys = {
-            {'<C-_>', mode = {'n', 'v'}},
+            {comment_shortcut, mode = {'n', 'v'}},
         },
         config = function()
-            require("config/Comment")
+            require(comment_config)
         end
 
     },
