@@ -48,6 +48,8 @@ lspconfig.svls.setup {}
 -- lspconfig.solc.setup {}
 lspconfig.solidity_ls_nomicfoundation.setup {}
 
+lspconfig.jsonls.setup {}
+
 lspconfig.gopls.setup {}
 
 

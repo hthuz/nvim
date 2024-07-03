@@ -309,7 +309,12 @@ require("lazy").setup({
         keys = {
             {'<leader>md', "<cmd>MarkdownPreview<cr>"}
         }
-    }
+    },
+
+	{
+		"fatih/vim-go",
+        ft = {"go", "mod", "sum"}
+	}
 
 }, { -- Config for lazy
     })
