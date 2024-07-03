@@ -2,11 +2,11 @@
 
 require('Comment').setup({
     toggler = {
-        line = '<C-/>'
+        line = '<C-_>'
     },
 
     opleader = {
-        line = '<C-/>'
+        line = '<C-_>'
     }
 
 })
