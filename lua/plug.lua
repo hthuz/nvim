@@ -327,6 +327,13 @@ require("lazy").setup({
 	{
 		"fatih/vim-go",
         ft = {"go", "mod", "sum"}
+	},
+
+	{
+		"lewis6991/gitsigns.nvim",
+        config = function()
+            require('config/gitsigns')
+        end
 	}
 
 }, { -- Config for lazy
