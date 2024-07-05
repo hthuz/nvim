@@ -93,7 +93,8 @@ cmp.setup({
         { name = 'vsnip' },
         { name = 'path'},
         { name = 'buffer' },
-		{ name = 'nvim_lua'}
+		{ name = 'nvim_lua'},
+		{ name = 'nvim_lsp_signature_help'}
     })
 })
 
@@ -114,6 +115,7 @@ cmp.setup.cmdline(':', {
         { name = 'cmdline' }
     })
 })
+
 
 -- local capabilities = require('cmp_nvim_lsp').default_capabilities()
 --

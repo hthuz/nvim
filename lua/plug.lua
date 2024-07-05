@@ -82,6 +82,11 @@ require("lazy").setup({
 		ft = {"lua"}
 	},
 
+	{
+		"hrsh7th/cmp-nvim-lsp-signature-help",
+		event = {"InsertEnter"}
+	},
+
     {
         "hrsh7th/cmp-buffer",
         event = {"InsertEnter","CmdLineEnter"}
@@ -345,7 +350,10 @@ require("lazy").setup({
 		config = function()
 			require('config/hover')
 		end
-
+	},
+	{
+		"lewis6991/satellite.nvim",
+		event = {"FileType"},
 	}
 
 
