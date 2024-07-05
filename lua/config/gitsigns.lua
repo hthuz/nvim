@@ -3,7 +3,7 @@ require("gitsigns").setup {
 
 	current_line_blame = true,
 	current_line_blame_opts = {
-		delay = 2000,
+		delay = 1000,
 	}
 
 }

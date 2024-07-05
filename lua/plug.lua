@@ -326,7 +326,10 @@ require("lazy").setup({
 
 	{
 		"fatih/vim-go",
-        ft = {"go", "mod", "sum"}
+        ft = {"go", "mod", "sum"},
+		config = function()
+			require("config/vim-go")
+		end
 	},
 
 	{
@@ -334,7 +337,17 @@ require("lazy").setup({
         config = function()
             require('config/gitsigns')
         end
+	},
+	-- Actually nvim has default vim.lsp.buf.hover() mapped with key K
+	-- However, this plugin enables hover using mouse
+	{
+		"lewis6991/hover.nvim",
+		config = function()
+			require('config/hover')
+		end
+
 	}
+
 
 }, { -- Config for lazy
     })
