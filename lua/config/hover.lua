@@ -13,12 +13,12 @@ require("hover").setup {
 		-- require('hover.providers.dictionary')
 	end,
 	preview_opts = {
-		border = 'single'
+		border = 'shadow'
 	},
 	-- Whether the contents of a currently open hover window should be moved
 	-- to a :h preview-window when pressing the hover keymap.
 	preview_window = false,
-	title = true,
+	title = false,
 	mouse_providers = {
 		'LSP'
 	},
