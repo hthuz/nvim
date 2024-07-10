@@ -1,6 +1,8 @@
 
 local lspconfig = require('lspconfig')
 
+
+-- pacman -S pyright
 lspconfig.pyright.setup {}
 -- lspconfig.pylsp.setup{}
 lspconfig.lua_ls.setup {

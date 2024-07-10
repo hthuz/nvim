@@ -215,6 +215,7 @@ require("lazy").setup({
     {
         "nvim-treesitter/nvim-treesitter",
         event = "FileType",
+		build = ":TSUpdate",
         config = function()
             require('config/nvim-treesitter')
         end
