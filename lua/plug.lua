@@ -84,7 +84,7 @@ require("lazy").setup({
 
 	{
 		"hrsh7th/cmp-nvim-lsp-signature-help",
-		lazy = true,
+		-- lazy = true,
 		event = {"InsertEnter"}
 	},
 
@@ -357,17 +357,38 @@ require("lazy").setup({
 		"lewis6991/satellite.nvim",
 		event = {"FileType"},
 	},
+	-- {
+	-- 	"ray-x/lsp_signature.nvim",
+	-- 	event = "VeryLazy",
+	-- 	config = function()
+	-- 		require("config/lsp_signature")
+	-- 	end
+	-- },
 	{
-		"ray-x/lsp_signature.nvim",
-		event = "VeryLazy",
+		"mfussenegger/nvim-dap",
+		keys = "<F9>",
 		config = function()
-			require("config/lsp_signature")
-		end
-	}
+			require('config/dap')
+		end,
+		dependencies = {
+			"rcarriga/nvim-dap-ui"
+		}
+	},
+	{
+		"rcarriga/nvim-dap-ui",
+		lazy = true,
+		config = function()
+			require('config/dap-ui')
+		end,
+		dependencies = {
+			"nvim-neotest/nvim-nio"
+		}
+	},
 
 
 }, { -- Config for lazy
     })
 
 require('config/nvim-lspconfig')
+
 
