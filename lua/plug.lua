@@ -84,6 +84,7 @@ require("lazy").setup({
 
 	{
 		"hrsh7th/cmp-nvim-lsp-signature-help",
+		lazy = true,
 		event = {"InsertEnter"}
 	},
 
@@ -355,6 +356,13 @@ require("lazy").setup({
 	{
 		"lewis6991/satellite.nvim",
 		event = {"FileType"},
+	},
+	{
+		"ray-x/lsp_signature.nvim",
+		event = "VeryLazy",
+		config = function()
+			require("config/lsp_signature")
+		end
 	}
 
 
