@@ -52,6 +52,9 @@ lspconfig.solidity_ls_nomicfoundation.setup {}
 
 lspconfig.jsonls.setup {}
 
+-- pacman -S gopls
 lspconfig.gopls.setup {}
 
+-- go install github.com/bufbuild/buf-language-server/cmd/bufls@latest
+lspconfig.bufls.setup {}
 
