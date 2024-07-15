@@ -58,3 +58,9 @@ lspconfig.gopls.setup {}
 -- go install github.com/bufbuild/buf-language-server/cmd/bufls@latest
 lspconfig.bufls.setup {}
 
+-- npm install -g dockerfile-language-server-nodejs
+lspconfig.dockerls.setup {}
+-- npm install @microsoft/compose-language-service
+lspconfig.docker_compose_language_service.setup{}
+
+
