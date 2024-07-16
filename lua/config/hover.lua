@@ -8,8 +8,8 @@ require("hover").setup {
 		-- require('hover.providers.jira')
 		-- require('hover.providers.dap')
 		-- require('hover.providers.fold_preview')
-		require('hover.providers.diagnostic')
-		require('hover.providers.man')
+		-- require('hover.providers.diagnostic')
+		-- require('hover.providers.man')
 		-- require('hover.providers.dictionary')
 	end,
 	preview_opts = {
