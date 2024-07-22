@@ -9,7 +9,7 @@ require('toggleterm').setup{
 
 }
 
-vim.cmd[[ autocmd TermEnter term://*toggleterm#* tnoremap <silent><C-t> <Cmd>exe v:count1 . "ToggleTerm"<CR> ]]
+vim.cmd[[ autocmd TermEnter term://*toggleterm#* tnoremap <silent><S-t> <Cmd>exe v:count1 . "ToggleTerm"<CR> ]]
 
 function _G.set_terminal_keymaps()
   local opts = {buffer = 0}

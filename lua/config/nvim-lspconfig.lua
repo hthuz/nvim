@@ -50,6 +50,7 @@ lspconfig.svls.setup {}
 -- lspconfig.solc.setup {}
 lspconfig.solidity_ls_nomicfoundation.setup {}
 
+-- npm i -g vscode-langservers-extracted
 lspconfig.jsonls.setup {}
 
 -- pacman -S gopls
