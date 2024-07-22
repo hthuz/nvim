@@ -1,7 +1,7 @@
 
 require('toggleterm').setup{
     -- hide_numbers = false,
-    size = math.floor(vim.o.columns * 0.4),
+    size = math.floor(vim.o.lines * 0.25),
     float_opts = {
         width = math.floor(vim.o.columns * 0.5),
         height = 30,
