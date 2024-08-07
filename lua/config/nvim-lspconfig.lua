@@ -59,5 +59,7 @@ lspconfig.bufls.setup {}
 lspconfig.dockerls.setup {}
 -- npm install @microsoft/compose-language-service
 lspconfig.docker_compose_language_service.setup{}
+-- pacman -S rust-analyzer
+lspconfig.rust_analyzer.setup {}
 
 
