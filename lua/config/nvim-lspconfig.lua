@@ -32,7 +32,7 @@ lspconfig.clangd.setup {}
 lspconfig.html.setup {
     capabilities = capabilities,
 }
-lspconfig.tsserver.setup {}
+lspconfig.ts_ls.setup {}
 
 lspconfig.cssls.setup {
     capabilities = capabilities,
@@ -53,13 +53,13 @@ lspconfig.solidity_ls_nomicfoundation.setup {}
 lspconfig.jsonls.setup {}
 -- pacman -S gopls
 lspconfig.gopls.setup {}
--- go install github.com/bufbuild/buf-language-server/cmd/bufls@latest
-lspconfig.bufls.setup {}
+lspconfig.buf_ls.setup {}
 -- npm install -g dockerfile-language-server-nodejs
 lspconfig.dockerls.setup {}
 -- npm install @microsoft/compose-language-service
 lspconfig.docker_compose_language_service.setup{}
 -- pacman -S rust-analyzer
+-- rustup component add rust-analyzer
 lspconfig.rust_analyzer.setup {}
 
 
