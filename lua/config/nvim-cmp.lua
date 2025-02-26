@@ -2,6 +2,7 @@
 local cmp = require'cmp'
 local select_opts = {behavior = cmp.SelectBehavior.Select}
 
+
 local has_words_before = function()
   unpack = unpack or table.unpack
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))

@@ -302,7 +302,7 @@ require("lazy").setup({
         },
         keys = {
             {'<leader>tc', "<cmd>NvimTreeClose<cr>"},
-            {'<leader>tt', "<cmd>NvimTreeFocus<cr>"}
+            {'<leader>tt', "<cmd>NvimTreeToggle<cr>"}
         },
         config = function()
             require("config/nvim-tree")
