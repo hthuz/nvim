@@ -2,6 +2,9 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- vim.api.nvim_set_var -> vim.g
 -- vim.api.nvim_set_option
 -- vim.api.nvim_set_keymap

@@ -42,14 +42,17 @@ lspconfig.tailwindcss.setup {}
 -- pacman -S marksman
 lspconfig.marksman.setup {}
 
+-- yay -S jdtls
 lspconfig.jdtls.setup {}
 
 lspconfig.r_language_server.setup{}
 
+-- yay -S svls
 lspconfig.svls.setup {}
 -- lspconfig.solc.setup {}
 lspconfig.solidity_ls_nomicfoundation.setup {}
 -- npm i -g vscode-langservers-extracted
+-- pacman -S vscode-json-languageserver
 lspconfig.jsonls.setup {}
 -- pacman -S gopls
 lspconfig.gopls.setup {}

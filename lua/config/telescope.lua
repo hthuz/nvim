@@ -2,6 +2,11 @@
 require('telescope').setup {
     extensions = {
     },
+	defaults = {
+		preview = false,
+		path_display = "short",
+		dynamic_preview_title = true
+	}
 
 }
 
