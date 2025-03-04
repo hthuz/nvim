@@ -298,7 +298,8 @@ require("lazy").setup({
     {
         "nvim-tree/nvim-tree.lua",
         dependencies = {
-            "nvim-tree/nvim-web-devicons"
+            "nvim-tree/nvim-web-devicons",
+			"antosha417/nvim-lsp-file-operations",
         },
         keys = {
             {'<leader>tc', "<cmd>NvimTreeClose<cr>"},
@@ -308,7 +309,17 @@ require("lazy").setup({
             require("config/nvim-tree")
         end
     },
-
+	{
+		"antosha417/nvim-lsp-file-operations",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			-- "nvim-tree/nvim-tree.lua",
+		},
+		lazy = true,
+		config = function()
+			require("lsp-file-operations").setup()
+		end,
+	},
     {
         'akinsho/toggleterm.nvim',
         keys = {

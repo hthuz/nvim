@@ -5,16 +5,24 @@ vim.g.maplocalleader = " "
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+
 -- vim.api.nvim_set_var -> vim.g
 -- vim.api.nvim_set_option
 -- vim.api.nvim_set_keymap
 --
 
 
+
+-- vim.diagnostic.config({
+	-- float = true,
+	-- virtual_text = false
+-- })
+
 require('opts')
 require('keys')
 require('plug')
 require("autocmds")
+require('utils')
 -- print('hello')
 -- print("world")
 vim.cmd[[colorscheme tokyonight-moon]]

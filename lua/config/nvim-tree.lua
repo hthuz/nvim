@@ -90,6 +90,8 @@ require('nvim-tree').setup{
 	git = {
 		enable = false
 	},
+	-- Update the root directory of the tree if the file is not under current
+	-- root directory. It prefers vim's cwd and `root_dirs`.
 	update_focused_file = {
 		enable = true,
 		update_root = true
@@ -98,6 +100,7 @@ require('nvim-tree').setup{
 		group_empty = true,
 		full_name = true
 	},
+    -- Change the working directory when changing directories in the tree.
 	actions = {
 		change_dir = {
 			enable = true,
