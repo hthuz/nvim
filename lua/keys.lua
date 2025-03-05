@@ -23,6 +23,8 @@ map("n", "<leader>w=", ":resize +5<cr>", {noremap = true})
 map("n", "<leader>w-", ":resize -5<cr>", {noremap = true})
 map("v", "<C-c>", '"+y', {noremap = true})
 map("n", "gr", ":lua vim.lsp.buf.references()<cr>", {noremap = true})
-map("n", "<leader>d", ":lua vim.diagnostic.open_float()<cr>", {noremap = true})
+map("n", "<C-I>", ":lua vim.lsp.buf.format()<cr>", {noremap = true, silent = true})
+map("n", "<leader>d", ":lua vim.diagnostic.open_float()<cr>", {noremap = true, silent = true})
+map("n", "q", "<NOP>", {noremap = true})
 
 
