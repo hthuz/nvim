@@ -12,12 +12,6 @@ vim.g.loaded_netrwPlugin = 1
 --
 
 
-
--- vim.diagnostic.config({
-	-- float = true,
-	-- virtual_text = false
--- })
-
 require('opts')
 require('keys')
 require('plug')

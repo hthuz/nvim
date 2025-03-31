@@ -374,9 +374,8 @@ require("lazy").setup({
 	},
 	{
 		"mfussenegger/nvim-jdtls",
-		ft = { "java" }
+		ft = {"java"},
 	},
-
 	{
 		"lewis6991/gitsigns.nvim",
 		config = function()

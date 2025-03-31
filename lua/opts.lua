@@ -37,6 +37,11 @@ opt.termguicolors = true
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
 
+vim.diagnostic.config({
+	float = true,
+	virtual_text = true,
+})
+
 vim.cmd[[ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif ]]                                                           
 
 

@@ -64,5 +64,7 @@ lspconfig.docker_compose_language_service.setup{}
 -- pacman -S rust-analyzer
 -- rustup component add rust-analyzer
 lspconfig.rust_analyzer.setup {}
+-- cargo install protols
+lspconfig.protols.setup{}
 
 
