@@ -94,19 +94,19 @@ require('nvim-tree').setup{
 	-- root directory. It prefers vim's cwd and `root_dirs`.
 	update_focused_file = {
 		enable = true,
-		update_root = true
+		-- update_root = true
 	},
 	renderer = {
 		group_empty = true,
 		full_name = true
 	},
     -- Change the working directory when changing directories in the tree.
-	actions = {
-		change_dir = {
-			enable = true,
-			-- global = true,
-		}
-	},
+	-- actions = {
+	-- 	change_dir = {
+	-- 		enable = true,
+	-- 		-- global = true,
+	-- 	}
+	-- },
 	tab = {
 		sync =  {
 			open = true,

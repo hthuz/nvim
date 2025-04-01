@@ -29,6 +29,8 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 -- pacman -S clangd
 lspconfig.clangd.setup {}
+-- yay -S cmake-language-server
+lspconfig.cmake.setup{}
 lspconfig.html.setup {
     capabilities = capabilities,
 }
@@ -41,6 +43,9 @@ lspconfig.cssls.setup {
 lspconfig.tailwindcss.setup {}
 -- pacman -S marksman
 lspconfig.marksman.setup {}
+
+-- go install github.com/sqls-server/sqls@latest
+lspconfig.sqls.setup {}
 
 -- yay -S jdtls
 lspconfig.jdtls.setup {}

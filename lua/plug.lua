@@ -146,16 +146,16 @@ require("lazy").setup({
 	-- 	end
 	-- },
 
-	{
-		"nvimdev/lspsaga.nvim",
-		config = function()
-			require('config/lspsaga')
-		end,
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-			"nvim-tree/nvim-web-devicons"
-		}
-	},
+	-- {
+	-- 	"nvimdev/lspsaga.nvim",
+	-- 	config = function()
+	-- 		require('config/lspsaga')
+	-- 	end,
+	-- 	dependencies = {
+	-- 		"nvim-treesitter/nvim-treesitter",
+	-- 		"nvim-tree/nvim-web-devicons"
+	-- 	}
+	-- },
 
 	-- it seems than if ft if html or event is InsertEnter,
 	-- treesitter won't load this plugin since autotag starts later than ts.
@@ -343,9 +343,9 @@ require("lazy").setup({
 	},
 
 
-	-- {
-	--     'Bekaboo/dropbar.nvim'
-	-- },
+	{
+	    'Bekaboo/dropbar.nvim'
+	},
 
 
 	{

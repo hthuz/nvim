@@ -7,6 +7,12 @@ require('lualine').setup {
 				'filename',
 				file_status = true,
 				path = 1, -- 0: Just the filename
+
+				symbols = {
+					modified = '[Modified]',
+					readonly = '[Read Only]'
+				}
+
 				-- 1: Relative path
 				-- 2: Absolute path
 				-- 3: Absolute path, with tilde as the home directory
