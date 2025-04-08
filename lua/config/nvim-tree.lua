@@ -86,9 +86,6 @@ require('nvim-tree').setup {
 		},
 		preserve_window_proportions = true
 	},
-	git = {
-		enable = true
-	},
 	-- Update the root directory of the tree if the file is not under current
 	-- root directory. It prefers vim's cwd and `root_dirs`.
 	update_focused_file = {
@@ -122,12 +119,21 @@ require('nvim-tree').setup {
 			close = true
 		}
 	},
+
+	git = {
+		enable = true,
+		show_on_dirs = true,
+		show_on_open_dirs = false,
+	},
 	diagnostics = {
 		enable = true,
 		show_on_dirs = true,
+		show_on_open_dirs = false,
 	},
 	modified = {
-		enable = true
+		enable = true,
+		show_on_dirs = true,
+		show_on_open_dirs = false,
 	},
 	on_attach = my_on_attach,
 }
