@@ -382,6 +382,23 @@ require("lazy").setup({
 			require('config/gitsigns')
 		end
 	},
+
+	{
+		"smjonas/inc-rename.nvim",
+		config = function()
+			require('inc_rename').setup{}
+		end,
+	},
+
+	-- {
+	-- 	"filipdutescu/renamer.nvim",
+	-- 	config = function()
+	-- 		require('renamer').setup{}
+	-- 	end,
+	-- 	keys = {
+	-- 		{'<F2>', '<cmd>lua require("renamer").rename()<cr>', {noremap=true, silent=true}}
+	-- 	},
+	-- },
 	-- Actually nvim has default vim.lsp.buf.hover() mapped with key K
 	-- However, this plugin enables hover using mouse
 	{

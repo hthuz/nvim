@@ -55,12 +55,15 @@ lspconfig.r_language_server.setup{}
 -- yay -S svls
 lspconfig.svls.setup {}
 -- lspconfig.solc.setup {}
-lspconfig.solidity_ls_nomicfoundation.setup {}
+-- lspconfig.solidity_ls_nomicfoundation.setup {}
+-- npm install -g vscode-solidity-server
+lspconfig.solidity_ls.setup{}
 -- npm i -g vscode-langservers-extracted
 -- pacman -S vscode-json-languageserver
 lspconfig.jsonls.setup {}
 -- pacman -S gopls
 lspconfig.gopls.setup {}
+-- pacman -S buf
 lspconfig.buf_ls.setup {}
 -- npm install -g dockerfile-language-server-nodejs
 lspconfig.dockerls.setup {}
