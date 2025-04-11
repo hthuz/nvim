@@ -16,7 +16,6 @@ require('opts')
 require('keys')
 require('plug')
 require("autocmds")
-require('utils')
 -- print('hello')
 -- print("world")
 vim.cmd[[colorscheme tokyonight-moon]]

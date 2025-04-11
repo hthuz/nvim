@@ -25,10 +25,18 @@ map("n", "gr", ":lua vim.lsp.buf.references()<cr>", { noremap = true })
 map("n", "<C-I>", ":lua vim.lsp.buf.format()<cr>", { noremap = true, silent = true })
 map("n", "<leader>d", ":lua vim.diagnostic.open_float()<cr>", { noremap = true, silent = true })
 map("n", "<leader>b", ":Gitsigns blame_line<cr>", { noremap = true, silent = true })
-map("n", "q", "<NOP>", { noremap = true })
--- TODO, set lazy key binding for command below
--- map("n", "<F2>", ":IncRename ", {})
---
+
+local count = 0
+vim.keymap.set('n', 'q', function()
+	count = count + 1
+	local t = {
+		a = "122",
+		b = 222,
+	}
+	Dump(t)
+	print("this is my test", count)
+end, opt)
+
 vim.keymap.set('n', '<F2>', function()
 
 	local prompt_opts = {
@@ -43,6 +51,8 @@ vim.keymap.set('n', '<F2>', function()
 	end)
 end, { expr = true })
 
+-- TODO, set lazy key binding for command below
+-- map("n", "<F2>", ":IncRename ", {})
 
 -- vim.keymap.set('n', '<F2>', function()
 -- 	return ":IncRename " .. vim.fn.expand("<cword>")

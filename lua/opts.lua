@@ -13,6 +13,9 @@ local opt = vim.opt
 local g = vim.g
 local bo = vim.bo
 
+-- disable auto comment after a comment line
+opt.formatoptions:remove({'c', 'r', 'o'})
+
 opt.filetype = "ON"
 opt.number = true
 opt.wrap = true
@@ -42,6 +45,5 @@ vim.diagnostic.config({
 	virtual_text = true,
 })
 
-vim.cmd[[ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif ]]                                                           
-
+vim.cmd[[ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif ]]
 
