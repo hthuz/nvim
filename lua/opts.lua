@@ -9,12 +9,10 @@
 -- vim.opt is **more recommended**
 
 
+
 local opt = vim.opt
 local g = vim.g
 local bo = vim.bo
-
--- disable auto comment after a comment line
-opt.formatoptions:remove({'c', 'r', 'o'})
 
 opt.filetype = "ON"
 opt.number = true

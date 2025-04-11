@@ -9,8 +9,6 @@ vim.g.loaded_netrwPlugin = 1
 -- vim.api.nvim_set_var -> vim.g
 -- vim.api.nvim_set_option
 -- vim.api.nvim_set_keymap
---
-
 
 require('opts')
 require('keys')

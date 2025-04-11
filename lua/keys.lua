@@ -33,7 +33,7 @@ vim.keymap.set('n', 'q', function()
 		a = "122",
 		b = 222,
 	}
-	Dump(t)
+	require'mydebug'.dump(t)
 	print("this is my test", count)
 end, opt)
 
