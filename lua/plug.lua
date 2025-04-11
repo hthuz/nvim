@@ -344,7 +344,7 @@ require("lazy").setup({
 
 
 	{
-	    'Bekaboo/dropbar.nvim'
+		'Bekaboo/dropbar.nvim'
 	},
 
 
@@ -374,7 +374,7 @@ require("lazy").setup({
 	},
 	{
 		"mfussenegger/nvim-jdtls",
-		ft = {"java"},
+		ft = { "java" },
 	},
 	{
 		"lewis6991/gitsigns.nvim",
@@ -383,12 +383,12 @@ require("lazy").setup({
 		end
 	},
 
-	{
-		"smjonas/inc-rename.nvim",
-		config = function()
-			require('inc_rename').setup{}
-		end,
-	},
+	-- {
+	-- 	"smjonas/inc-rename.nvim",
+	-- 	config = function()
+	-- 		require('inc_rename').setup {}
+	-- 	end,
+	-- },
 
 	-- {
 	-- 	"filipdutescu/renamer.nvim",

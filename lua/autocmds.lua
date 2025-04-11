@@ -13,4 +13,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
 })
 
 
+vim.api.nvim_create_user_command("M",function()
+	vim.cmd('10messages')
+end,{})
 

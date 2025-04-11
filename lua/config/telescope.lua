@@ -4,7 +4,6 @@ require('telescope').setup {
     },
 	defaults = {
 		preview = false,
-		path_display = "short",
 		dynamic_preview_title = true
 	}
 
